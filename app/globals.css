@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #172B4D;
+  --navy: #071B43;
+  --dark-blue: #0B2D66;
+  --primary-blue: #0878E8;
+  --cyan: #00C7F7;
+  --orange: #FF9418;
+  --light-bg: #F3F8FF;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-navy: var(--navy);
+  --color-dark-blue: var(--dark-blue);
+  --color-primary: var(--primary-blue);
+  --color-cyan: var(--cyan);
+  --color-orange: var(--orange);
+  --color-light-bg: var(--light-bg);
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+}
+
+main {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #0878E8;
+  border-radius: 3px;
+}
+
+/* Gradient utilities */
+.gradient-text {
+  background: linear-gradient(135deg, #0878E8 0%, #00C7F7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-orange {
+  background: linear-gradient(135deg, #FF9418 0%, #FFD700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card shadows */
+.card-shadow {
+  box-shadow: 0 4px 20px rgba(7, 27, 67, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.card-shadow-hover {
+  box-shadow: 0 12px 32px rgba(8, 120, 232, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+/* Smooth device frame */
+.phone-shadow {
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.6), 0 0 40px rgba(8, 120, 232, 0.25);
+}
